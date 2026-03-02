@@ -1,4 +1,4 @@
-# Agent Teams 实时监控看板 | Real-time Monitoring Dashboard for Agent Teams
+# Agent Teams Monitoring Dashboard
 
 [中文](#中文) | [English](#english)
 
