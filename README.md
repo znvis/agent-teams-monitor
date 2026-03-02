@@ -1,73 +1,89 @@
-# React + TypeScript + Vite
+# Agent Teams 实时监控看板 | Real-time Monitoring Dashboard for Agent Teams
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[中文](#中文) | [English](#english)
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 中文
 
-## React Compiler
+### 📸 简介
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+一款炫酷的 React + TypeScript + Tailwind CSS 实时监控看板，专门为 Agent Teams 设计！
 
-## Expanding the ESLint configuration
+### ✨ 功能特点
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📊 **统计卡片**：Agent 总数、在线数、进行中/已完成/待处理任务
+- 🤖 **Agent 列表**：实时显示每个 Agent 的状态、CPU/内存使用率、完成任务数、响应时间
+- 📋 **任务列表**：按状态/优先级展示任务，显示分配的 Agent
+- 📝 **实时日志**：最近 50 条日志，按级别着色
+- ✨ **炫酷 UI**：深色渐变背景、卡片悬停效果、实时更新动画
+- 📱 **响应式设计**：手机电脑都能看
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 🚀 快速开始
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+```bash
+# 安装依赖
+npm install
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# 启动开发服务器
+npm run dev
+
+# 打包构建
+npm run build
+
+# 预览打包结果
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🛠️ 技术栈
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 3
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## English
+
+### 📸 Introduction
+
+A sleek real-time monitoring dashboard built with React + TypeScript + Tailwind CSS, designed specifically for Agent Teams!
+
+### ✨ Features
+
+- 📊 **Stats Cards**: Total agents, online agents, in-progress/completed/pending tasks
+- 🤖 **Agent List**: Real-time status, CPU/memory usage, completed tasks, average response time per agent
+- 📋 **Task List**: Tasks organized by status/priority with assigned agents
+- 📝 **Real-time Logs**: Last 50 logs with color-coded levels
+- ✨ **Beautiful UI**: Dark gradient background, card hover effects, real-time update animations
+- 📱 **Responsive Design**: Works on mobile and desktop
+
+### 🚀 Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
+
+### 🛠️ Tech Stack
+
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS 3
+
+---
+
+## License
+
+MIT
